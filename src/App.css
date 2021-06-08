@@ -1,0 +1,76 @@
+.navbar {
+  background-color: #24272c;
+}
+.log-in-button {
+  outline: black;
+  background-color: #fbc93b;
+}
+.log-in-button:hover {
+  background-color: white;
+}
+.whatsapp-icon {
+  color: forestgreen;
+}
+.price-stock {
+  color: orange;
+}
+.whatsapp-icon:hover {
+  color: #fbc93b;
+}
+.price-stock:hover {
+  color: white;
+}
+.navbar-link-button:hover {
+  color: #fbc93b;
+}
+.navbar-link-button {
+  color: white;
+}
+.pages-background-color {
+  background-color: #24272c;
+}
+
+.lets-talk-button:hover {
+  background-color: white;
+}
+.lets-talk-button {
+  outline: black;
+  background-color: #fbc93b;
+}
+.footer-color {
+  background-color: #141519;
+}
+.footer-headings {
+  color: white;
+}
+.footer-non-head {
+  color: white;
+}
+.working-hours-text {
+  color: #5bc0de;
+}
+.jumbotron {
+  color: #24272c;
+}
+.about-owner-info {
+  color: #fbc93b;
+}
+.text-form-heading {
+  color: #fbc93b;
+}
+.stock-head {
+  color: #fbc93b;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
