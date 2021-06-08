@@ -77,6 +77,8 @@ class ContactUs extends Component {
                submitmessage: `Ooops something went 
                wrong. ${name}, Please try again later `,
                submitmessagecolor:"text-danger",
+               waitingmessage:"",
+               waitingmessagecolor:"",
            }); 
          
    
