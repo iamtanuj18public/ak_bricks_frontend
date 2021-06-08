@@ -15,6 +15,8 @@ class ContactUs extends Component {
              phone:"+91",
              submitmessage:"",
              submitmessagecolor:"",
+             waitingmessage:"",
+             waitingmessagecolor:"",
  
                
  
@@ -35,10 +37,15 @@ class ContactUs extends Component {
                message:this.state.message,
                phone:this.state.phone,
           };
+          this.setState({ waitingmessage:"PLease wait....",
+          waitingmessagecolor:"text-success",
+
+          });
           const response=await axios.post("https://flask-app-ak-bricks-backend.herokuapp.com/api/contact/us/add",newContact);
    
           const isSuccessful=response.data.isSuccessful;
           const {name}=this.state;
+
       
           if(isSuccessful)
           {    
@@ -55,6 +62,8 @@ class ContactUs extends Component {
                   submitmessage: `Thank you ${name}.
                   I will contact you soon ! `,
                   submitmessagecolor:"text-success",
+                  waitingmessage:"",
+                  waitingmessagecolor:"",
               });
               
               
@@ -76,7 +85,7 @@ class ContactUs extends Component {
         
       }
     render() {
-        const {submitmessage,submitmessagecolor}=this.state;
+        const {submitmessage,submitmessagecolor,waitingmessage,waitingmessagecolor}=this.state;
       
         return (
             <div className="mt-5 pt-5 pages-background-color">
@@ -160,6 +169,9 @@ class ContactUs extends Component {
                         <br />
                         <br />
                         <br />
+                        <div className="text-center pt-2 pb-2">
+                            <h6 className={waitingmessagecolor}>{waitingmessage}</h6>
+                        </div>
                         <div className="text-center pt-2 pb-2">
                             <h6 className={submitmessagecolor}>{submitmessage}</h6>
                         </div>
