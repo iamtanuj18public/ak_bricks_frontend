@@ -23,18 +23,34 @@ import axios from "axios";
        
        
            ],
-           table:[
+           tables:[
             {   id:1,
                 name:"Server Down",
                 contact:"Server Down",
                 message:"Server Down",
                 datetime:"Server Down",
+                
+
+            },
+            {   id:2,
+                name:"Server Down",
+                contact:"Server Down",
+                message:"Server Down",
+                datetime:"Server Down",
+                
+
+            },
+            {   id:3,
+                name:"Server Down",
+                contact:"Server Down",
+                message:"Server Down",
+                datetime:"Server Down",
+                
 
             },
             
            ],
-           username:"anilkumar",
-           password:"jatin123",
+          
           
           
           
@@ -49,21 +65,21 @@ import axios from "axios";
           ]);
           const newState={};
   
-          if(responseContact.data.isSuccessful )
+          if(responseContact.data.isSuccessful && responseContact.data.results.length !==0 )
           { 
-              if(responseContact.data.results.length !==0)
-              {
-                newState.table=responseContact.data.results
+              
+              
+                newState.tables=responseContact.data.results
 
               }
               else
               {
-                newState.table=[
+                newState.tables=[
                     {
                         "name": "NOTHING TO SHOW",
                         "contact": "NOTHING TO SHOW",
                         "datetime": "NOTHING TO SHOW",
-                        "id": "NOTHING TO SHOW",
+                        "id":1348995503,
                         "message": "NOTHING TO SHOW",
                         
                     }
@@ -73,7 +89,7 @@ import axios from "axios";
               }
             
             
-          }
+          
           if(responsePriceAndStock.data.isSuccessful && responsePriceAndStock.data.results.length !==0)
           {
           

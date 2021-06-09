@@ -222,7 +222,7 @@ import axios from "axios";
             <Consumer>
             { 
                   (value)=>{
-                    const {table}=value;
+                    const {tables}=value;
                    
                     return( 
                         <div className="container-fluid mt-5 pb-5 pt-5 pages-background-color">
@@ -382,7 +382,7 @@ import axios from "axios";
                 <th>Date/time</th>
                
               </tr>
-              {    table.map((output)=> <Table key={output.id} output={output}/>
+              {    tables.map((output)=> <Table key={output.id} output={output}/>
                                                         )
                                                        
              }

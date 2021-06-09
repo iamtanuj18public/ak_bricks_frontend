@@ -32,7 +32,7 @@ class ContactUs extends Component {
       {
           event.preventDefault();
           const newContact={
-               id:uuid(),
+               id:uuid()+uuid()+322,
                name:this.state.name,
                message:this.state.message,
                phone:this.state.phone,

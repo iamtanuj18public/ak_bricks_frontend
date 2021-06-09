@@ -34,10 +34,7 @@ import BrandImage from '../assets/brandimg.logo.final.png';
             </button>
             <div className="collapse navbar-collapse  flex-grow-0"  id="collapseNav">
                 <div className="navbar-nav ">
-                            <a className="mx-1 nav-item  whatsapp-icon my-auto"
-                    href="https://api.whatsapp.com/send?phone=91 99834 83163">
-                    <i className="fab fa-whatsapp fa-2x"></i>
-                        </a>
+                       
                         <Link to="/" className="my-auto navbar-link-button  nav-item nav-link  font-weight-bold mx-1">
                                         Home
                                         </Link>

@@ -68,14 +68,14 @@ import ProfilePic from "../assets/Profile_Pic.jpeg"
                             
                         <div className="container mt-5 ">
                             <div className="row mt-5">
-                                <div className="col-12 pt-5 col-md-6 "  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50" easing= "ease-in-out-back">
+                                <div className="col-12 pt-5 col-md-6 ">
                                    
                                 
                                   <ImageSlider />
                                 
             
                                 </div>
-                                <div className="col-12 text-center pt-5 col-md-6"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" easing= "ease-in-out-back">
+                                <div className="col-12 text-center pt-5 col-md-6">
                                     
                                <h1  className="pt-5 text-info text-center">
                                </h1>
@@ -97,14 +97,14 @@ import ProfilePic from "../assets/Profile_Pic.jpeg"
                         </div>
                         <div className="container mt-5">
                         <div className="row mt-5">
-                                <div className="col-12 pt-5 col-md-6"  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50" easing= "ease-in-out-back">
+                                <div className="col-12 pt-5 col-md-6">
                                    
                                 
                                 <img className="img-fluid" src={Vision} alt="" />
                                 
             
                                 </div>
-                                <div className="col-12 text-center pt-5 col-md-6"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" easing= "ease-in-out-back">
+                                <div className="col-12 text-center pt-5 col-md-6">
                                     <br />
                                <h4 className="text-info">
                                    Our Vision
