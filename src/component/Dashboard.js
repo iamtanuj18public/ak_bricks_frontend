@@ -33,6 +33,19 @@ import axios from "axios";
         messagecolornormalprice:"",
         tablemessage:"",
         tablecolor:"",
+        waitmessagebp:"",
+        waitcolorbp:"",
+        waitmessagelp:"",
+        waitcolorlp:"",
+        waitcolornp:"",
+        waitmessagenp:"",
+        waitcolorbs:"",
+        waitmessagebs:"",
+        waitcolorls:"",
+        waitmessagels:"",
+        waitcolorns:"",
+        waitmessagens:"",
+        
         
      };
      let loggedIn=true;
@@ -72,16 +85,28 @@ import axios from "axios";
         const updatedblockprice={
             blockprice:this.state.blockprice,
         };
+        this.setState({
+            waitmessagebp:"Please wait....",
+            waitcolorbp:"text-success",
+        })
      const response = await axios.patch("https://flask-app-ak-bricks-backend.herokuapp.com/api/blockprice/update",updatedblockprice);
      const isSuccessful=response.data.isSuccessful;
         if(isSuccessful){
             this.setState({messageblock:" updated"});
             this.setState({messagecolorblock:" text-success "});
+            this.setState({
+                waitmessagebp:"",
+                waitcolorbp:"",
+            })
         }
         else
         {
             this.setState({messageblock:"Couldn't update server error......"});
             this.setState({messagecolorblock:" text-danger "});
+            this.setState({
+                waitmessagebp:"",
+                waitcolorbp:"",
+            })
 
         }
 
@@ -91,16 +116,28 @@ import axios from "axios";
         const updatelightprice={
             lightbrickprice:this.state.lightprice,
         };
+        this.setState({
+            waitmessagelp:"Please wait....",
+            waitcolorlp:"text-success",
+        })
      const response = await axios.patch("https://flask-app-ak-bricks-backend.herokuapp.com/api/lightbrickprice/update",updatelightprice);
      const isSuccessful=response.data.isSuccessful;
         if(isSuccessful){
             this.setState({messagelight:" updated"});
             this.setState({messagecolorlight:" text-success "});
+            this.setState({
+                waitmessagelp:"",
+                waitcolorlp:"",
+            })
         }
         else
         {
             this.setState({messagelight:"Couldn't update server error......"});
             this.setState({messagecolorlight:" text-danger "});
+            this.setState({
+                waitmessagelp:"",
+                waitcolorlp:"",
+            })
 
         }
 
@@ -110,16 +147,28 @@ import axios from "axios";
         const updatenormalprice={
             normalbrickprice:this.state.normalprice,
         };
+        this.setState({
+            waitmessagenp:"Please wait....",
+            waitcolornp:"text-success",
+        })
      const response = await axios.patch("https://flask-app-ak-bricks-backend.herokuapp.com/api/normalbrickprice/update",updatenormalprice);
      const isSuccessful=response.data.isSuccessful;
         if(isSuccessful){
             this.setState({messagenormal:" updated"});
             this.setState({messagecolornormal:" text-success "});
+            this.setState({
+                waitmessagenp:"",
+                waitcolornp:"",
+            })
         }
         else
         {
             this.setState({messagenormal:"Couldn't update server error......"});
             this.setState({messagecolornormal:" text-danger "});
+            this.setState({
+                waitmessagenp:"",
+                waitcolornp:"",
+            })
 
         }
 
@@ -129,16 +178,27 @@ import axios from "axios";
         const updateblockstock={
             blockstock:this.state.blockstock,
         };
+        this.setState({
+            waitmessagebs:"Please wait....",
+            waitcolorbs:"text-success",
+        })
      const response = await axios.patch("https://flask-app-ak-bricks-backend.herokuapp.com/api/blockstock/update",updateblockstock);
      const isSuccessful=response.data.isSuccessful;
         if(isSuccessful){
             this.setState({messageblockprice:" updated"});
-            this.setState({messagecolorblockprice:" text-success "});
+            this.setState({messagecolorblockprice:" text-success "}); this.setState({
+                waitmessagebs:"",
+                waitcolorbs:"",
+            })
         }
         else
         {
             this.setState({messageblockprice:"Couldn't update server error......"});
             this.setState({messagecolorblockprice:" text-danger "});
+            this.setState({
+                waitmessagebs:"",
+                waitcolorbs:"",
+            })
 
         }
 
@@ -148,16 +208,28 @@ import axios from "axios";
         const updatelightstock={
             lightstock:this.state.lightbrickstock,
         };
+        this.setState({
+            waitmessagels:"Please wait....",
+            waitcolorls:"text-success",
+        })
      const response = await axios.patch("https://flask-app-ak-bricks-backend.herokuapp.com/api/lightbrickstock/update",updatelightstock);
      const isSuccessful=response.data.isSuccessful;
         if(isSuccessful){
             this.setState({messagelightprice:" updated"});
             this.setState({messagecolorlightprice:" text-success "});
+            this.setState({
+                waitmessagels:"",
+                waitcolorls:"",
+            })
         }
         else
         {
             this.setState({messagelightprice:"Couldn't update server error......"});
             this.setState({messagecolorlightprice:" text-danger "});
+            this.setState({
+                waitmessagels:"",
+                waitcolorls:"",
+            })
 
         }
 
@@ -167,16 +239,28 @@ import axios from "axios";
         const updatenormalstock={
             normalstock:this.state.normalbrickstock,
         };
+        this.setState({
+            waitmessagens:"Please wait....",
+            waitcolorns:"text-success",
+        })
      const response = await axios.patch("https://flask-app-ak-bricks-backend.herokuapp.com/api/normalbrickstock/update",updatenormalstock);
      const isSuccessful=response.data.isSuccessful;
         if(isSuccessful){
             this.setState({messagenormalprice:" updated"});
             this.setState({messagecolornormalprice:" text-success "});
+            this.setState({
+                waitmessagens:"",
+                waitcolorns:"",
+            })
         }
         else
         {
             this.setState({messagenormalprice:"Couldn't update server error......"});
             this.setState({messagecolornormalprice:" text-danger "});
+            this.setState({
+                waitmessagens:"",
+                waitcolorns:"",
+            })
 
         }
 
@@ -190,6 +274,10 @@ import axios from "axios";
     };
     deletetable= async(e)=>{
         e.preventDefault();
+        this.setState({
+            waitmessagedt:"Please wait....",
+            waitcolordt:"text-success",
+        })
      
        
      const response = await axios.delete("https://flask-app-ak-bricks-backend.herokuapp.com/api/delete/table");
@@ -197,17 +285,22 @@ import axios from "axios";
         if(isSuccessful){
             this.setState({tablemessage:"Items were deleted , please reload the page."});
             this.setState({tablecolor:" text-success "});
+            this.setState({
+                waitmessagedt:"",
+                waitcolordt:"",
+            })
         }
         else if(isSuccessful==false)
         {
             this.setState({tablemessage:"Items couldn't be deleted, please try after sometime"});
             this.setState({tablecolor:" text-danger "});
+            this.setState({
+                waitmessagedt:"",
+                waitcolordt:"",
+            })
 
         }
-        else
-        {
-            alert('error')
-        }
+     
 
     };
     render() {
@@ -217,7 +310,9 @@ import axios from "axios";
                 }
         const {messageblock,messagelight,messagenormal,messagecolorblock,
             messagecolorlight,messagecolornormal,messageblockprice,messagecolorblockprice
-        ,messagecolorlightprice,tablemessage,tablecolor,messagelightprice,messagenormalprice,messagecolornormalprice}=this.state;
+        ,messagecolorlightprice,tablemessage,tablecolor,messagelightprice,messagenormalprice,messagecolornormalprice,
+        waitcolorbp,waitmessagebp,  waitcolorlp,waitmessagelp,waitcolornp,waitmessagenp,waitcolorbs,waitmessagebs,
+        waitcolorls,waitmessagels, waitcolorns,waitmessagens,waitcolordt,waitmessagedt}=this.state;
         return(
             <Consumer>
             { 
@@ -267,6 +362,8 @@ import axios from "axios";
                                                 </div>
                                                 <button type="submit" className="btn ml-5 btn-outline-light
                                                 ">Update</button><br /><span className="text-center">
+                                                    <p className={waitcolorbp}>{waitmessagebp}</p>
+                                                    <br />
                                                 <p className={messagecolorblock}>
                                                 {messageblock}</p>
                                                 </span>
@@ -284,6 +381,8 @@ import axios from "axios";
                                                 </div>
                                                 <button type="submit" className="btn ml-5 btn-outline-light
                                                 ">Update</button><br /><span className="text-center">
+                                                     <p className={waitcolorlp}>{waitmessagelp}</p>
+                                                    <br />
                                                 <p className={messagecolorlight}>
                                                 {messagelight}</p>
                                                 </span>
@@ -301,6 +400,8 @@ import axios from "axios";
                                                 </div>
                                                 <button type="submit" className="btn ml-5 btn-outline-light
                                                 ">Update</button><br /><span className="text-center">
+                                                     <p className={waitcolornp}>{waitmessagenp}</p>
+                                                    <br />
                                                     <p className={messagecolornormal}>
                                                     {messagenormal}</p>
                                                     </span>
@@ -320,6 +421,8 @@ import axios from "axios";
                                                 </div>
                                                 <button type="submit" className="btn ml-5 btn-outline-light
                                                 ">Update</button><br /><span className="text-center">
+                                                     <p className={waitcolorbs}>{waitmessagebs}</p>
+                                                    <br />
                                                 <p className={messagecolorblockprice}>
                                                 {messageblockprice}</p>
                                                 </span>
@@ -337,6 +440,9 @@ import axios from "axios";
                                                 </div>
                                                 <button type="submit" className="btn ml-5 btn-outline-light
                                                 ">Update</button><br /><span className="text-center">
+                                               <p className={waitcolorls}>{waitmessagels}</p>
+                                                    <br />
+
                                                 <p className={messagecolorlightprice}>
                                                 {messagelightprice}</p>
                                                 </span>
@@ -354,6 +460,9 @@ import axios from "axios";
                                                 </div>
                                                 <button type="submit" className="btn ml-5 btn-outline-light
                                                 ">Update</button><br /><span className="text-center">
+                                                    <p className={waitcolorns}>{waitmessagens}</p>
+                                                    <br />
+
                                                     <p className={messagecolornormalprice}>
                                                     {messagenormalprice}</p>
                                                     </span>
@@ -374,7 +483,11 @@ import axios from "axios";
 
                                       </form>
                                       </div>
-                                  <div className="text-center pb-2 "><h5 className={tablecolor}>{tablemessage}</h5></div>
+                                     
+                                  <div className="text-center pb-2 ">
+                                  <p className={waitcolordt}>{waitmessagedt}</p>
+                                                    <br />
+                                      <h5 className={tablecolor}>{tablemessage}</h5></div>
                                <table className="text-light bg-dark s">
               <tr>
                 <th>Name</th>

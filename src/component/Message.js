@@ -1,84 +1,100 @@
-import React from 'react';
-import { Consumer } from '../Contextapi';
+import React , {Component} from 'react';
+import axios from "axios";
 
- function Message(props) {
-     return(
-        <Consumer >
-            {
-                (value)=>
-                
-                { 
-                    const {tables}=value;
-                    const id=props.match.params.id;
-                    const data=tables.filter((data)=>data.id==id)[0];
+class Message extends Component {
+    state={
+        contact:"",
+        name:"",
+        datetime:"",
+        message:"",
 
-                    const {name,contact,message,datetime}=data; 
-                    return (
-                        <div  className="container-fluid pages-background-color pt-5 mt-5">
-                              
-                               <div className="container pt-5 pages-backround-color">
-                                   <h3 className="text-light text-center pb-5 pt-5"> Details</h3>
 
-                                   <table className="pt-4">
-                                       <tr className="text-light">
-                                           <td>
-                                               Name:
+    };
+    async componentDidMount() {
+        const response = await axios.get(
+          `https://flask-app-ak-bricks-backend.herokuapp.com/api/api/contact/us/get?id=${this.props.match.params.id}` 
+        );
+        const isSuccessful = response.data.isSuccessful;
+    
+        if (isSuccessful) {
+          this.setState({
+            name: response.data.result.name,
+            contact: response.data.result.contact,
+            message: response.data.result.message,
+            datetime: response.data.result.datetime,
+          });
+        }
+      }
+    
+    render()
+     { const { name, contact, message,datetime } = this.state;
+        return (
+            <div  className="container-fluid pages-background-color pt-5 mt-5">
+                  
+                   <div className="container pt-5 pages-backround-color">
+                       <h3 className="text-light text-center pb-5 pt-5"> Details</h3>
 
-                                           </td>
-                                           <td className="text-success bg-dark">
-                                               {name}
+                       <table className="pt-4">
+                           <tr className="text-light">
+                               <td>
+                                   Name:
 
-                                           </td>
-                                       </tr>
-                                       <tr className="text-light">
-                                           <td>
-                                               Contact:
+                               </td>
+                               <td className="text-success bg-dark">
+                                   {name}
 
-                                           </td>
-                                           <td className="text-success bg-dark">
-                                               {contact}
+                               </td>
+                           </tr>
+                           <tr className="text-light">
+                               <td>
+                                   Contact:
 
-                                           </td>
-                                       </tr>
-                                       <tr className="text-light">
-                                           <td>
-                                               Message:
+                               </td>
+                               <td className="text-success bg-dark">
+                                   {contact}
 
-                                           </td>
-                                           <td className="text-success bg-dark">
-                                               {message}
+                               </td>
+                           </tr>
+                           <tr className="text-light">
+                               <td>
+                                   Message:
 
-                                           </td>
-                                       </tr>
-                                       <tr className="text-light">
-                                           <td>
-                                               date-time:
+                               </td>
+                               <td className="text-success bg-dark">
+                                   {message}
 
-                                           </td>
-                                           <td className="text-success bg-dark">
-                                               {datetime}
+                               </td>
+                           </tr>
+                           <tr className="text-light">
+                               <td>
+                                   date-time:
 
-                                           </td>
-                                       </tr>
+                               </td>
+                               <td className="text-success bg-dark">
+                                   {datetime}
 
-                                   </table>
-                        
+                               </td>
+                           </tr>
 
-                        </div>
-                       
+                       </table>
+            
 
-                        
-                        
-                        </div>
-                     
-                    );
+            </div>
+           
 
-                }
-            }
+            
+            
+            </div>
+         
+        );
 
-        </Consumer>
+     }
 
-     );
+       
+                    
+         
+
+     
     
     
 }

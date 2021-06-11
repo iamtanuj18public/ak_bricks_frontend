@@ -24,33 +24,19 @@ import axios from "axios";
        
            ],
            tables:[
-            {   id:1,
-                name:"Server Down",
-                contact:"Server Down",
-                message:"Server Down",
-                datetime:"Server Down",
-                
+               {
 
-            },
-            {   id:2,
-                name:"Server Down",
-                contact:"Server Down",
-                message:"Server Down",
-                datetime:"Server Down",
-                
+                name:"server down",
+                contact:"server down",
+                message:"server down",
+                id:1,
+                datetime:"server down",
 
-            },
-            {   id:3,
-                name:"Server Down",
-                contact:"Server Down",
-                message:"Server Down",
-                datetime:"Server Down",
-                
+               },
+           ]
+        
 
-            },
-            
-           ],
-          
+       
           
           
           
@@ -65,22 +51,22 @@ import axios from "axios";
           ]);
           const newState={};
   
-          if(responseContact.data.isSuccessful && responseContact.data.results.length !==0 )
+          if(responseContact.data.isSuccessful )
           { 
-              
-              
+              if(responseContact.data.results.length !==0 )
+              {
                 newState.tables=responseContact.data.results
 
+
               }
-              else
-              {
+              else            
                 newState.tables=[
                     {
-                        "name": "NOTHING TO SHOW",
-                        "contact": "NOTHING TO SHOW",
-                        "datetime": "NOTHING TO SHOW",
-                        "id":1348995503,
-                        "message": "NOTHING TO SHOW",
+                        "name":"Nothing to show",
+                        "contact":"Nothing to show",
+                        "message":"Nothing to show",
+                        "id":1,
+                        "datetime":"Nothing to show",
                         
                     }
                 ]

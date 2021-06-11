@@ -12,11 +12,27 @@ import BrandImage from '../assets/brandimg.logo.final.png';
     {
         loginbutton="Anil Kumar";
     }
+    const homepush=()=>{
+        window.location.href = "/"
+
+    }
+    const pandspush=()=>{
+        window.location.href = "/pands"
+    }
+    const contactpush=()=>{
+        window.location.href = "/contact-us"
+
+    }
+    const loginpush=()=>{
+        window.location.href = "/login"
+
+    }
+   
 
     return ( 
     <nav className="navbar  navbar-expand-sm navbar fixed-top">
       <div className="container mt-1 ">
-        <Link  to="/"  className="navbar-brand   navbar-link-button  font-weight-bold">
+        <Link  to="/" onClick={homepush}  className="navbar-brand   navbar-link-button  font-weight-bold">
              <img src={BrandImage} style={{height:"60px",width:"280px"}} alt="AK" />
            </Link>
           
@@ -29,20 +45,20 @@ import BrandImage from '../assets/brandimg.logo.final.png';
     
        
             <button className="navbar-toggler  " data-toggle="collapse"
-             data-target="#collapseNav">
+             data-target=".navbar-collapse">
                 <span className="fas fa-bars text-light "></span>
             </button>
             <div className="collapse navbar-collapse  flex-grow-0"  id="collapseNav">
                 <div className="navbar-nav ">
                        
-                        <Link to="/" className="my-auto navbar-link-button  nav-item nav-link  font-weight-bold mx-1">
-                                        Home
+                        <Link to="/" onClick={homepush} className="my-auto navbar-link-button   nav-item nav-link  font-weight-bold mx-1">
+                                       Home
                                         </Link>
-                    <Link to="/pands" className="nav-item price-stock nav-link 
+                    <Link to="/pands" onClick={pandspush} className="nav-item price-stock nav-link 
                      font-weight-bold mx-1 my-auto">Price and Stock</Link>
-                    <Link to="/contact-us"  className="nav-item nav-link 
+                    <Link to="/contact-us" onClick={contactpush}  className="nav-item nav-link 
                      font-weight-bold mx-1 navbar-link-button my-auto">Contact Us</Link>
-                      <Link to="/login"  className="nav-item nav-link text-light
+                      <Link to="/login" onClick={loginpush} className="nav-item nav-link text-light
                      font-weight-bold mx-1 my-auto"><button className="log-in-button
                      btn btn-md text-dark
                      font-weight-bold">{loginbutton}</button></Link>

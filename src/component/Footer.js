@@ -6,6 +6,13 @@ import Mapicon from "../assets/map-icon.png";
 
 
  function Footer() {
+   
+    
+    const contactpush=()=>{
+        window.location.href = "/contact-us"
+
+    }
+  
     return (
         <footer className="pages-background-color">
         
@@ -14,7 +21,7 @@ import Mapicon from "../assets/map-icon.png";
             <div className="py-3  text-center">
             <hr   className="  bg-light"/>
                 <h2 className="pt-3  footer-headings">Having any query?</h2>
-               <Link to="/contact-us"> <button className="btn btn-md my-3 
+               <Link to="/contact-us" onClick={contactpush}> <button className="btn btn-md my-3 
                font-weight-bold lets-talk-button">Let's Talk !</button></Link>
               
 
@@ -76,6 +83,7 @@ import Mapicon from "../assets/map-icon.png";
         </footer>
       
     );
-}
+    }
+
 
 export default Footer;

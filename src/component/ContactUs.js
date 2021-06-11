@@ -39,6 +39,9 @@ class ContactUs extends Component {
           };
           this.setState({ waitingmessage:"PLease wait....",
           waitingmessagecolor:"text-success",
+          submitmessage: "",
+          submitmessagecolor:"",
+          
 
           });
           const response=await axios.post("https://flask-app-ak-bricks-backend.herokuapp.com/api/contact/us/add",newContact);
@@ -75,7 +78,7 @@ class ContactUs extends Component {
    
            this.setState({
                submitmessage: `Ooops something went 
-               wrong. ${name}, Please try again later `,
+               wrong. ${name}, Please try again  `,
                submitmessagecolor:"text-danger",
                waitingmessage:"",
                waitingmessagecolor:"",
