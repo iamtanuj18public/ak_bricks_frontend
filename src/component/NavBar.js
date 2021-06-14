@@ -32,7 +32,7 @@ import BrandImage from '../assets/brandimg.logo.final.png';
     return ( 
     <nav className="navbar  navbar-expand-sm navbar fixed-top">
       <div className="container mt-1 ">
-        <Link  to="/" onClick={homepush}  className="navbar-brand   navbar-link-button  font-weight-bold">
+        <Link  onClick={homepush}  className="navbar-brand   navbar-link-button  font-weight-bold">
              <img src={BrandImage} style={{height:"60px",width:"280px"}} alt="AK" />
            </Link>
           
@@ -51,14 +51,14 @@ import BrandImage from '../assets/brandimg.logo.final.png';
             <div className="collapse navbar-collapse  flex-grow-0"  id="collapseNav">
                 <div className="navbar-nav ">
                        
-                        <Link to="/" onClick={homepush} className="my-auto navbar-link-button   nav-item nav-link  font-weight-bold mx-1">
+                        <Link  onClick={homepush} className="my-auto navbar-link-button   nav-item nav-link  font-weight-bold mx-1">
                                        Home
                                         </Link>
-                    <Link to="/pands" onClick={pandspush} className="nav-item navbar-link-button nav-link 
+                    <Link  onClick={pandspush} className="nav-item navbar-link-button nav-link 
                      font-weight-bold mx-1 my-auto">Price and Stock</Link>
-                    <Link to="/contact-us" onClick={contactpush}  className="nav-item nav-link 
+                    <Link  onClick={contactpush}  className="nav-item nav-link 
                      font-weight-bold mx-1 navbar-link-button my-auto">Contact Us</Link>
-                      <Link to="/login" onClick={loginpush} className="nav-item nav-link text-light
+                      <Link onClick={loginpush} className="nav-item nav-link text-light
                      font-weight-bold mx-1 my-auto"><button className="log-in-button
                      btn btn-md text-dark
                      font-weight-bold">{loginbutton}</button></Link>
