@@ -21,6 +21,7 @@ import NotFound from "./component/NotFound";
 
 
 
+
 function App() {
   return ( 
     <Provider> 
@@ -36,6 +37,7 @@ function App() {
             <Route exact path="/login" component={LoginPage}/>
             <Route exact path="/dashboard" component={Dashboard}/>
             <Route exact path="/message/:id" component={Message}/>
+            
             <Route>
            <NotFound />
            </Route>

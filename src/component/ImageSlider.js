@@ -18,7 +18,7 @@ import CAR10 from "../assets/CAR10.jpg"
         <Carousel style={{height:"100%"}}  >
                         <Carousel.Item interval={1000}>
                 <img
-               style={{height:"720px",width:"600px"}}
+              className="img-fluid"
                 src={CAR1}
                 alt="First slide"
                 />
@@ -29,7 +29,7 @@ import CAR10 from "../assets/CAR10.jpg"
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-               style={{height:"720px",width:"600px"}}
+              className="img-fluid"
                 src={CAR2}
                 alt="Second slide"
                 />
@@ -40,7 +40,7 @@ import CAR10 from "../assets/CAR10.jpg"
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-                 style={{height:"720px",width:"600px"}}
+                className="img-fluid"
              
                 src={CAR3}
                 alt="Third slide"
@@ -52,7 +52,7 @@ import CAR10 from "../assets/CAR10.jpg"
                 </Carousel.Item>
                 <Carousel.Item interval={1000}>
                 <img
-             style={{height:"720px",width:"600px"}}
+            className="img-fluid"
                 src={CAR4}
                 alt="Forth slide"
                 />
@@ -63,7 +63,7 @@ import CAR10 from "../assets/CAR10.jpg"
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-               style={{height:"720px",width:"600px"}}
+              className="img-fluid"
                 src={CAR5}
                 alt="Fifth slide"
                 />
@@ -74,7 +74,7 @@ import CAR10 from "../assets/CAR10.jpg"
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-              style={{height:"720px",width:"600px"}}
+             className="img-fluid"
                 src={CAR6}
                 alt="Sixth slide"
                 />
@@ -85,7 +85,7 @@ import CAR10 from "../assets/CAR10.jpg"
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-               style={{height:"720px",width:"600px"}}
+              className="img-fluid"
                 src={CAR7}
                 alt="Seventh slide"
                 />
@@ -96,7 +96,7 @@ import CAR10 from "../assets/CAR10.jpg"
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-           style={{height:"720px",width:"600px"}}
+          className="img-fluid"
                 src={CAR8}
                 alt="Eight slide"
                 />
@@ -107,7 +107,7 @@ import CAR10 from "../assets/CAR10.jpg"
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-         style={{height:"720px",width:"600px"}}
+        className="img-fluid"
                 src={CAR9}
                 alt="Ninth slide"
                 />
@@ -118,7 +118,7 @@ import CAR10 from "../assets/CAR10.jpg"
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-             style={{height:"720px",width:"600px"}}
+            className="img-fluid"
                 src={CAR10}
                 alt="Tenth slide"
                 />
