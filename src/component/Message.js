@@ -12,7 +12,7 @@ class Message extends Component {
     };
     async componentDidMount() {
         const response = await axios.get(
-          `https://flask-app-ak-bricks-backend.herokuapp.com/api/api/contact/us/get?id=${this.props.match.params.id}` 
+          `https://flask-app-ak-bricks-backend.herokuapp.com/api/contact?id=${this.props.match.params.id}` 
         );
         const isSuccessful = response.data.isSuccessful;
     
@@ -25,6 +25,7 @@ class Message extends Component {
           });
         }
       }
+   
     
     render()
      { const { name, contact, message,datetime } = this.state;

@@ -11,14 +11,14 @@ import CAR8 from "../assets/CAR8.jpg"
 import CAR9 from "../assets/CAR9.jpg"
 import CAR10 from "../assets/CAR10.jpg"
 
-export default function ImageSlider(props) {
+ function ImageSlider() {
  
    
     return (
-        <Carousel style={{height:"100%"}} >
+        <Carousel style={{height:"100%"}}  >
                         <Carousel.Item interval={1000}>
                 <img
-                className="img-fluid w-100"
+               style={{height:"720px",width:"600px"}}
                 src={CAR1}
                 alt="First slide"
                 />
@@ -29,7 +29,7 @@ export default function ImageSlider(props) {
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-                className=" img-fluid w-100"
+               style={{height:"720px",width:"600px"}}
                 src={CAR2}
                 alt="Second slide"
                 />
@@ -40,7 +40,8 @@ export default function ImageSlider(props) {
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-                className="d-block w-100"
+                 style={{height:"720px",width:"600px"}}
+             
                 src={CAR3}
                 alt="Third slide"
                 />
@@ -51,7 +52,7 @@ export default function ImageSlider(props) {
                 </Carousel.Item>
                 <Carousel.Item interval={1000}>
                 <img
-                className="img-fluid w-100"
+             style={{height:"720px",width:"600px"}}
                 src={CAR4}
                 alt="Forth slide"
                 />
@@ -62,7 +63,7 @@ export default function ImageSlider(props) {
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-                className="img-fluid w-100"
+               style={{height:"720px",width:"600px"}}
                 src={CAR5}
                 alt="Fifth slide"
                 />
@@ -73,7 +74,7 @@ export default function ImageSlider(props) {
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-                className="img-fluid w-100"
+              style={{height:"720px",width:"600px"}}
                 src={CAR6}
                 alt="Sixth slide"
                 />
@@ -84,7 +85,7 @@ export default function ImageSlider(props) {
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-                className="img-fluid w-100"
+               style={{height:"720px",width:"600px"}}
                 src={CAR7}
                 alt="Seventh slide"
                 />
@@ -95,7 +96,7 @@ export default function ImageSlider(props) {
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-                className="img-fluid w-100"
+           style={{height:"720px",width:"600px"}}
                 src={CAR8}
                 alt="Eight slide"
                 />
@@ -106,7 +107,7 @@ export default function ImageSlider(props) {
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-                className="img-fluid w-100"
+         style={{height:"720px",width:"600px"}}
                 src={CAR9}
                 alt="Ninth slide"
                 />
@@ -117,7 +118,7 @@ export default function ImageSlider(props) {
             </Carousel.Item>
             <Carousel.Item interval={1000}>
                 <img
-                className="img-fluid w-100"
+             style={{height:"720px",width:"600px"}}
                 src={CAR10}
                 alt="Tenth slide"
                 />
@@ -134,3 +135,4 @@ export default function ImageSlider(props) {
       </Carousel>
     )
 }
+export default ImageSlider;

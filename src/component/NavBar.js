@@ -54,7 +54,7 @@ import BrandImage from '../assets/brandimg.logo.final.png';
                         <Link to="/" onClick={homepush} className="my-auto navbar-link-button   nav-item nav-link  font-weight-bold mx-1">
                                        Home
                                         </Link>
-                    <Link to="/pands" onClick={pandspush} className="nav-item price-stock nav-link 
+                    <Link to="/pands" onClick={pandspush} className="nav-item navbar-link-button nav-link 
                      font-weight-bold mx-1 my-auto">Price and Stock</Link>
                     <Link to="/contact-us" onClick={contactpush}  className="nav-item nav-link 
                      font-weight-bold mx-1 navbar-link-button my-auto">Contact Us</Link>

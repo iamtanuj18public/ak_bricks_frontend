@@ -4,9 +4,11 @@ import {Link} from "react-router-dom";
  function Table(props) {
      const {name,contact,datetime,id}=props.output;
      const messagepush=()=>{
+        window.location.href = `/message/${id}`
          
         
      }
+     
     return (
         <>
          <tr>

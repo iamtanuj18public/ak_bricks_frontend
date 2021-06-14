@@ -29,7 +29,7 @@ import axios from "axios";
                 name:"server down",
                 contact:"server down",
                 message:"server down",
-                id:1,
+                id:0.000000001,
                 datetime:"server down",
 
                },
@@ -65,7 +65,7 @@ import axios from "axios";
                         "name":"Nothing to show",
                         "contact":"Nothing to show",
                         "message":"Nothing to show",
-                        "id":1,
+                        "id":0.0000000000222,
                         "datetime":"Nothing to show",
                         
                     }

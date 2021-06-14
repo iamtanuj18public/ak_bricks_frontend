@@ -50,7 +50,7 @@ import ProfilePic from "../assets/Profile_Pic.jpeg"
                                     <Card.Title className="bg-dark text-left">AK Bricks and company was
                                     established on <span className="text-info">16th February 2020.</span> </Card.Title>
                                     <Card.Text className="text-left pt-3">Its located near the Kuchaman Valley, the factory is well 
-                                        equiped with the latest machines and materials.
+                                        equipped with the latest machines and materials.
                                     </Card.Text> 
                                     <Card.Text><img className="img-fluid"
                                      src={ESTABLISHMENT_BOX_IMAGE} alt="AK Bricks"/>

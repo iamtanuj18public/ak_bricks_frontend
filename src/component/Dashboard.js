@@ -85,6 +85,8 @@ import axios from "axios";
         const updatedblockprice={
             blockprice:this.state.blockprice,
         };
+        this.setState({messageblock:""});
+        this.setState({messagecolorblock:""});
         this.setState({
             waitmessagebp:"Please wait....",
             waitcolorbp:"text-success",
@@ -116,6 +118,9 @@ import axios from "axios";
         const updatelightprice={
             lightbrickprice:this.state.lightprice,
         };
+        this.setState({messagelight:""});
+        this.setState({messagecolorlight:""});
+ 
         this.setState({
             waitmessagelp:"Please wait....",
             waitcolorlp:"text-success",
@@ -151,6 +156,8 @@ import axios from "axios";
             waitmessagenp:"Please wait....",
             waitcolornp:"text-success",
         })
+        this.setState({messagenormal:""});
+        this.setState({messagecolornormal:""});
      const response = await axios.patch("https://flask-app-ak-bricks-backend.herokuapp.com/api/normalbrickprice/update",updatenormalprice);
      const isSuccessful=response.data.isSuccessful;
         if(isSuccessful){
@@ -178,6 +185,8 @@ import axios from "axios";
         const updateblockstock={
             blockstock:this.state.blockstock,
         };
+        this.setState({messageblockprice:""});
+        this.setState({messagecolorblockprice:""});
         this.setState({
             waitmessagebs:"Please wait....",
             waitcolorbs:"text-success",
@@ -208,6 +217,8 @@ import axios from "axios";
         const updatelightstock={
             lightstock:this.state.lightbrickstock,
         };
+        this.setState({messagelightprice:""});
+        this.setState({messagecolorlightprice:""});
         this.setState({
             waitmessagels:"Please wait....",
             waitcolorls:"text-success",
@@ -239,6 +250,8 @@ import axios from "axios";
         const updatenormalstock={
             normalstock:this.state.normalbrickstock,
         };
+        this.setState({messagenormalprice:""});
+            this.setState({messagecolornormalprice:""});
         this.setState({
             waitmessagens:"Please wait....",
             waitcolorns:"text-success",
@@ -274,6 +287,8 @@ import axios from "axios";
     };
     deletetable= async(e)=>{
         e.preventDefault();
+        this.setState({tablemessage:""});
+        this.setState({tablecolor:""});
         this.setState({
             waitmessagedt:"Please wait....",
             waitcolordt:"text-success",
@@ -350,122 +365,312 @@ import axios from "axios";
                                             </h4>
                                             <h5 className="text-info text-center">Choose the item
                                             to be updated</h5>
+                                      
                                             <form onSubmit={this.blockprice} className="text-center" >
-                                                <div className="pt-2 form-group">
-                                                    <label className="
+                                                <div className="pt-2 ">
+                                                    <table className="dashboard-table">
+                                                        <tr>
+                                                            <td>
+                                                            <label className="
                                                     text-light" htmlFor="block-price">Block Price:</label>
-                                                    <input required
+
+                                                            </td>
+                                                            <td>
+                                                                
+                                                    <input placeholder="Please enter here" required
                                                     onChange={this.changeblockprice}
-                                                     className="bg-dark ml-5 text-light
+                                                     className="bg-dark  text-light
                                                      " type="number" />
-            
-                                                </div>
-                                                <button type="submit" className="btn ml-5 btn-outline-light
-                                                ">Update</button><br /><span className="text-center">
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                        <td>
+                                                        <button type="submit" className="btn mt-2 btn-outline-light
+                                                ">Update</button>
+                                                            
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span className="text-light">Status:</span>
+
+                                                            </td>
+                                                            <td>
+                                                            <span className="">
                                                     <p className={waitcolorbp}>{waitmessagebp}</p>
-                                                    <br />
+                                                    
                                                 <p className={messagecolorblock}>
                                                 {messageblock}</p>
                                                 </span>
+
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                   
+            
+                                                </div>
+                                            
                                                 </form >
                                                 <form onSubmit={this.lightprice} 
                                                 className="text-center mt-4">
-                                                <div className="pt-2 form-group">
-                                                    <label className="
+                                                <div className="pt-2 ">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                            <label className="
                                                     text-light" htmlFor="block-price ">Light Brick 
                                                     Price:</label>
-                                                    <input required onChange={this.changelightprice}
-                                                    className="bg-dark ml-3 text-light
+                                                                
+                                                            </td>
+                                                            <td>
+                                                            <input placeholder="Please enter here" required onChange={this.changelightprice}
+                                                    className="bg-dark  text-light
                                                      " type="number" />
-            
-                                                </div>
-                                                <button type="submit" className="btn ml-5 btn-outline-light
-                                                ">Update</button><br /><span className="text-center">
+
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                           
+
+                                                            </td>
+                                                            <td>
+                                                            <button type="submit" className="btn mt-2 btn-outline-light
+                                                ">Update</button>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                            <span className="text-light">Status:</span>
+                                                          
+                                                            </td>
+                                                            <td>
+                                                            <span className="">
                                                      <p className={waitcolorlp}>{waitmessagelp}</p>
-                                                    <br />
+                                                  
                                                 <p className={messagecolorlight}>
                                                 {messagelight}</p>
                                                 </span>
+
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    
+                                                   
+            
+                                                </div>
+                                             
                                                 </form>
                                                 <form  onSubmit={this.normalprice}
                                                 className="text-center mt-4">
-                                                <div className="pt-2 form-group">
-                                                    <label className="
+                                                <div className="pt-2">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                            <label className="
                                                     text-light" htmlFor="block-price">Normal
                                                      Brick Price:</label>
-                                                    <input required onChange={this.changenormalprice} 
+                                                                
+                                                            </td>
+                                                            <td>
+                                                            <input placeholder="Please enter here" required onChange={this.changenormalprice} 
                                                     className="bg-dark  text-light
                                                      " type="number" />
-            
-                                                </div>
-                                                <button type="submit" className="btn ml-5 btn-outline-light
-                                                ">Update</button><br /><span className="text-center">
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+
+                                                            </td>
+                                                            <td>
+                                                            <button type="submit" className="btn mt-2 btn-outline-light
+                                                ">Update</button>
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                            <span className="text-light">Status:</span>
+                                                                
+                                                            </td>
+                                                        <td>
+                                                        <span className="">
                                                      <p className={waitcolornp}>{waitmessagenp}</p>
-                                                    <br />
+                                                 
                                                     <p className={messagecolornormal}>
                                                     {messagenormal}</p>
                                                     </span>
+                                                        </td>
+                                                        </tr>
+
+                                                    </table>
+                                                  
+                                                   
+            
+                                                </div>
+                                             
                                             </form>
                                             <br />
                                             <br />
                                             <br />
                                             <form onSubmit={this.blockstock} className="text-center" >
                                                 <div className="pt-2 form-group">
-                                                    <label className="
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                            <label className="
                                                     text-light" htmlFor="block-price">Block Stock:</label>
-                                                    <input required
+
+                                                            </td>
+                                                            <td>
+                                                                 
+                                                    <input placeholder="Please enter here" required
                                                     onChange={this.changeblockstock}
-                                                     className="bg-dark ml-5 text-light
+                                                     className="bg-dark text-light
                                                      " type="number" />
-            
-                                                </div>
-                                                <button type="submit" className="btn ml-5 btn-outline-light
-                                                ">Update</button><br /><span className="text-center">
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+
+                                                            </td>
+                                                            <td>
+                                                            <button type="submit" className="btn btn-outline-light
+                                                ">Update</button>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                            <span className="text-light">Status:</span>
+
+                                                            </td>
+
+                                                            <td>
+                                                            <span className="">
                                                      <p className={waitcolorbs}>{waitmessagebs}</p>
-                                                    <br />
+                                             
                                                 <p className={messagecolorblockprice}>
                                                 {messageblockprice}</p>
                                                 </span>
+
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                  
+            
+                                                </div>
+                                            
                                                 </form >
                                                 <form onSubmit={this.lightbrickstock} 
                                                 className="text-center mt-4">
                                                 <div className="pt-2 form-group">
-                                                    <label className="
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                            <label className="
                                                     text-light" htmlFor="block-price ">Light Brick Stock 
                                                     :</label>
-                                                    <input required onChange={this.changelightbrickstock}
-                                                    className="bg-dark ml-3 text-light
+
+                                                            </td>
+                                                            <td>
+                                                            <input placeholder="Please enter here" required onChange={this.changelightbrickstock}
+                                                    className="bg-dark text-light
                                                      " type="number" />
-            
-                                                </div>
-                                                <button type="submit" className="btn ml-5 btn-outline-light
-                                                ">Update</button><br /><span className="text-center">
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+
+                                                            </td>
+                                                            <td>
+                                                            <button type="submit" className="btn  btn-outline-light
+                                                ">Update</button>
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                            <span className="text-light">Status:</span>
+
+                                                            </td>
+                                                            <td>
+                                                            <span className="">
                                                <p className={waitcolorls}>{waitmessagels}</p>
-                                                    <br />
+                                                  
 
                                                 <p className={messagecolorlightprice}>
                                                 {messagelightprice}</p>
                                                 </span>
+
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                   
+                                                    
+            
+                                                </div>
+                                   
                                                 </form>
                                                 <form  onSubmit={this.normalbrickstock}
                                                 className="text-center mt-4">
                                                 <div className="pt-2 form-group">
-                                                    <label className="
+                                                    <table>
+                                                        <tr>
+
+                                                            <td>
+                                                            <label className="
                                                     text-light" htmlFor="block-price">Normal
                                                      Brick Stock:</label>
-                                                    <input required onChange={this.changenormalbrickstock} 
+
+                                                            </td>
+                                                            <td>
+                                                            <input placeholder="Please enter here" required onChange={this.changenormalbrickstock} 
                                                     className="bg-dark  text-light
                                                      " type="number" />
-            
-                                                </div>
-                                                <button type="submit" className="btn ml-5 btn-outline-light
-                                                ">Update</button><br /><span className="text-center">
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+
+                                                            </td>
+                                                            <td>
+                                                            <button type="submit" className="btn  btn-outline-light
+                                                ">Update</button>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                            <span className="text-light">Status:</span>
+                                                                
+                                                            </td>
+                                                            <td>
+                                                            <span className="">
                                                     <p className={waitcolorns}>{waitmessagens}</p>
-                                                    <br />
+                                                
 
                                                     <p className={messagecolornormalprice}>
                                                     {messagenormalprice}</p>
                                                     </span>
+
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                   
+                                                   
+            
+                                                </div>
+                                            
                                             </form>
                                         </div>
             
