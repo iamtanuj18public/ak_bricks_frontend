@@ -1,15 +1,30 @@
 import React , {Component} from 'react';
 import axios from "axios";
+import {Redirect} from "react-router-dom";
 
 class Message extends Component {
-    state={
-        contact:"",
-        name:"",
-        datetime:"",
-        message:"",
+   
+    constructor(props)
+    {
+        super(props)
+        const token=localStorage.getItem("token")
+            this.state={
+            contact:"",
+            name:"",
+            datetime:"",
+            message:"",
+    
+    
+        }
+        let loggedIn=true;
+        if(token==null)
+        {
+            loggedIn=false;
+        }
+        this.state={loggedIn}
+    }
+   
 
-
-    };
     async componentDidMount() {
         const response = await axios.get(
           `https://flask-app-ak-bricks-backend.herokuapp.com/api/contact?id=${this.props.match.params.id}` 
@@ -28,7 +43,11 @@ class Message extends Component {
    
     
     render()
-     { const { name, contact, message,datetime } = this.state;
+     {    if(this.state.loggedIn===false)
+        {
+           return <Redirect to="/login"/>
+                }
+          const { name, contact, message,datetime } = this.state;
         return (
             <div  className="container-fluid pages-background-color pt-5 mt-5">
                   
