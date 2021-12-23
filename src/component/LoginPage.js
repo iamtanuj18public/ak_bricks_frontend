@@ -30,7 +30,7 @@ class LoginPage extends Component {
       username: this.state.username,
       password: this.state.password,
     };
-    this.setState({ loggincolor: "text-succes text-center" });
+    this.setState({ loggincolor: "text-success text-center" });
     this.setState({ logginmessage: "Please wait....." });
     const response = await axios.patch(
       "https://flask-app-ak-bricks-backend.herokuapp.com/api/password",
