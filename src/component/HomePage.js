@@ -129,7 +129,7 @@ import ProfilePic from "../assets/Profile_Pic.jpeg"
                                 our delivered value in the eyes of every customer and community.</p>
                                 
                                <br />
-                               <a href="https://www.itstanuj.com">
+                               <a href="/">
                                <button className="btn btn-outline-success float-right">Contact Website Developer</button>
                                </a>
                               
